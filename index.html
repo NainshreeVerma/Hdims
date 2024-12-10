@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDIMS</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>HDIMS</p>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#home" class="Link active">Home</a></li>
+                <li><a href="#about" class="Link">About</a></li>
+                <li><a href="#serives" class="Link">Services</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class='bx bx-menu' onclick="myMenuFuction()"></i>
+        </div>
+    </nav> 
+  <!---form box-->
+  <form action="login.php" method="POST" id="login">
+  <div class="form-box">
+        <!--login form-->
+         <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="username"  placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div> 
+            <div class="input-box">
+             <input type="password" class="input-field" name="password" placeholder="Password">
+             <i class="bx bx-lock-alt"></i>
+            </div> 
+            <div class="input-box">
+                <label for="role" style="color: white;">Role:</label>
+                <select name="role" id="role" required>
+                    <option value="doctor">Doctor</option>
+                    <option value="patient">Patient</option>
+                </select>
+            </div>            
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                   <input type="checkbox" id="login-check">
+                   <label for="Login-check">Remember Me</label> 
+                </div>
+                <div class="two">
+                    <label><a href="#">Forget Password</a></label>
+                </div>
+            </div>
+         </div>
+      </div>
+  </form>
+     <!---registration form-->
+     <div class="register-container" id="register">
+        <div class="top">
+            <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+            <header>Sign Up</header>
+        </div>
+        <form action="register.php" method="POST" id="register">
+        <div class="two-forms">
+           <div class="input-box">
+               <input type="text" name="firstname" class="input-field" placeholder="Firstname">
+               <i class="bx bx-user"></i>
+           </div> 
+           <div class="input-box">
+            <input type="text" name="lastname" class="input-field" placeholder="Lastname">
+            <i class="bx bx-user"></i>
+           </div> 
+        </div>
+        <div class="input-box">
+            <input type="text"  name="email" class="input-field" placeholder="Email">
+            <i class="bx bx-envelope"></i>
+        </div> 
+        <div class="input-box">
+         <input type="password" name="password" class="input-field" placeholder="Password">
+         <i class="bx bx-lock-alt"></i>
+        </div> 
+        <div class="input-box">
+            <label for="role" style="color: white;">Role:</label>
+            <select name="role" id="role" required>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Patient</option>
+            </select>
+        </div>        
+        <div class="input-box">
+            <input type="submit" class="submit" value="Register">
+        </div>
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" id="register-check">
+               <label for="register-check">Remember Me</label> 
+            </div>
+            <div class="two">
+                <label><a href="#">Terms & conditions</a></label>
+            </div>
+        </div>
+        </form>
+     </div>
+  </div>
+</div>
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <h2>Secure & Efficient Health Data Management</h2>
+        <p>Manage patient records, schedule appointments, and generate reports all in one place.</p>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Our Health Data Information and Management System is designed to streamline medical data handling, ensuring secure and efficient access for healthcare providers and patients alike.Our 
+            system empowers healthcare providers with modern solutions to manage patient records, streamline operations, and enhance patient outcomes. With HDIMS, you can focus on delivering
+             exceptional healthcare while we take care of your data.</p>
+        <ul>
+           <li><strong>Advanced Encryption:</strong> Protect patient data with encryption algorithms to ensure compliance with healthcare regulations and privacy standards like HIPAA.</li>
+           <li><strong>Automated Workflows:</strong> Minimize administrative tasks through automated appointment scheduling, billing, and record management, allowing healthcare staff to focus on patient care.</li>
+           <li><strong>Customizable Dashboards:</strong> Tailor the dashboard to your clinic's or hospital's needs, offering a personalized view of key metrics such as patient visits, treatment plans, and more.</li>
+           <li><strong>Scalable Infrastructure:</strong> Whether you run a small clinic or a large hospital, our system grows with your needs, supporting an increasing number of patients and users without compromising performance.</li>
+           <li><strong>24/7 Support:</strong> Our dedicated support team is available around the clock to help resolve any issues, ensuring that your system runs smoothly at all times.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section  class="features-section">
+    <div class="container">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Patient Data Management</h3>
+                <p>Securely store and access patient records with encryption.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Appointment Scheduling</h3>
+                <p>Easily schedule appointments and set reminders for patients.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Data Analytics & Reporting</h3>
+                <p>Generate insightful reports on patient data and health trends.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Data Security</h3>
+                <p>Compliant with healthcare standards to ensure patient data privacy.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>For Hospitals</h3>
+                <p>Enterprise-level integration with large hospital systems.</p>
+            </div>
+            <div class="service-item">
+                <h3>For Clinics</h3>
+                <p>Simple, streamlined solutions for smaller practices.</p>
+            </div>
+            <div class="service-item">
+                <h3>For Patients</h3>
+                <p>Patients can access their records, make appointments, and more.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>2024 Health Data Information and Management System. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+<!--JS-->
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login(){
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register(){
+        x.style.left = "-520px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+</script>
